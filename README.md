@@ -28,20 +28,12 @@ maintainability.
 
 **Overview**
 
-`QueryService Interface`: 
+`QueryService Interface`: Defines the getData() method to retrieve data from a database.
 
-Defines the getData() method to retrieve data from a database.
-
-`Concrete Services`: 
-
-TIDBService, MONGOService, and NEO4JService implement the QueryService interface
+`Concrete Services`: TIDBService, MONGOService, and NEO4JService implement the QueryService interface
 and handle specific database operations.
 
-`DatabaseFactory`:
+`DatabaseFactory`: Returns the appropriate QueryService instance based on the database type.
 
-Returns the appropriate QueryService instance based on the database type.
-
-`ProcessFactory`:
-
-Retrieves the correct service instance from DatabaseFactory and invokes its
+`ProcessFactory`: Retrieves the correct service instance from DatabaseFactory and invokes its
 getData() method.
